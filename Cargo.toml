@@ -1,0 +1,17 @@
+[package]
+name = "bunt"
+description = "Conversion between different color spaces."
+authors = ["Richard Neumann <neumann@paulmann.de>"]
+license = "MIT"
+repository = "https://github.com/PaulmannLighting/bunt"
+keywords = ["color", "space", "conversion", "rgb"]
+documentation = "https://docs.rs/bunt"
+version = "0.1.0"
+edition = "2024"
+exclude = [".gitignore"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+
+[features]
+serde = ["dep:serde"]

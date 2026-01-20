@@ -1,2 +1,3 @@
 # bunt
-Library to convert between different color representations.
+
+Library to convert between different color spaces.
