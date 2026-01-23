@@ -18,19 +18,19 @@ impl LinearRgb {
 
     /// Get the red component.
     #[must_use]
-    pub const fn red(&self) -> f32 {
+    pub const fn red(self) -> f32 {
         self.red
     }
 
     /// Get the green component.
     #[must_use]
-    pub const fn green(&self) -> f32 {
+    pub const fn green(self) -> f32 {
         self.green
     }
 
     /// Get the blue component.
     #[must_use]
-    pub const fn blue(&self) -> f32 {
+    pub const fn blue(self) -> f32 {
         self.blue
     }
 }

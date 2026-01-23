@@ -25,19 +25,19 @@ impl Xyz {
 
     /// Return the X value.
     #[must_use]
-    pub const fn x(&self) -> f32 {
+    pub const fn x(self) -> f32 {
         self.x
     }
 
     /// Return the Y value.
     #[must_use]
-    pub const fn y(&self) -> f32 {
+    pub const fn y(self) -> f32 {
         self.y
     }
 
     /// Return the Z value.
     #[must_use]
-    pub const fn z(&self) -> f32 {
+    pub const fn z(self) -> f32 {
         self.z
     }
 }
