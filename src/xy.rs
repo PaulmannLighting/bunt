@@ -1,5 +1,5 @@
-use crate::Rgb;
 use crate::xyz::Xyz;
+use crate::{LinearRgb, Rgb};
 
 /// CIE 1931 XY color space representation.
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -44,6 +44,12 @@ impl From<Xyz> for Xy {
                 ((xyz.y() / sum) * Self::MULTIPLIER).round_ties_even() as u16,
             )
         }
+    }
+}
+
+impl From<LinearRgb> for Xy {
+    fn from(linear_rgb: LinearRgb) -> Self {
+        Self::from(Xyz::from(linear_rgb))
     }
 }
 
