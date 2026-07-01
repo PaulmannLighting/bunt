@@ -7,7 +7,7 @@ repository = "https://github.com/PaulmannLighting/bunt"
 keywords = ["color", "space", "conversion", "rgb"]
 categories = ["data-structures"]
 documentation = "https://docs.rs/bunt"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 exclude = [".gitignore"]
 
