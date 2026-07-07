@@ -1,6 +1,6 @@
-use crate::linear_rgb::LinearRgb;
+use crate::LinearRgb;
 
-/// Coefficients for converting Linear RGB to a single channel of XYZ.
+/// Row coefficients for converting linear RGB into one XYZ component.
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug)]
 pub struct Coefficients {
@@ -10,13 +10,13 @@ pub struct Coefficients {
 }
 
 impl Coefficients {
-    /// Create new coefficients.
+    /// Creates row coefficients for red, green, and blue channels.
     #[must_use]
     pub const fn new(red: f32, green: f32, blue: f32) -> Self {
         Self { red, green, blue }
     }
 
-    /// Apply the coefficients to a Linear RGB color.
+    /// Applies the coefficients to a linear RGB color.
     #[must_use]
     pub fn apply(&self, linear_rgb: LinearRgb) -> f32 {
         self.apply_rgb(linear_rgb.red(), linear_rgb.green(), linear_rgb.blue())
